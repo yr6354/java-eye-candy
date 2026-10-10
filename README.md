@@ -6,7 +6,7 @@
 
 [![Java](https://img.shields.io/badge/Java-22%2B-orange?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](.)
-[![Build](https://img.shields.io/badge/build-none%20needed-blue)](.)
+[![build](https://github.com/yr6354/java-eye-candy/actions/workflows/build.yml/badge.svg)](https://github.com/yr6354/java-eye-candy/actions/workflows/build.yml)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 <img src="docs/raytracer.png" width="860" alt="Ray tracer output">
