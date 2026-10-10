@@ -4,7 +4,7 @@
 
 **五个用纯 Java 手搓的「哇塞」小玩意 —— 零依赖、零构建、一行命令跑起来**
 
-[![Java](https://img.shields.io/badge/Java-17%2B-orange?logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![Java](https://img.shields.io/badge/Java-22%2B-orange?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](.)
 [![Build](https://img.shields.io/badge/build-none%20needed-blue)](.)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
@@ -30,7 +30,14 @@ cd java-eye-candy
 java src/candy/Fractal.java          # 就是这么简单，没有编译、没有安装
 ```
 
-> 需要 JDK 17 或更新版本（单文件源码启动）。作者在 JDK 26 上开发和测试。
+> **一键运行需要 JDK 22 或更新版本** —— 靠的是 JDK 22 引入的多文件源码启动。
+> 源码本身兼容 JDK 17+，老版本 JDK 就先编译再运行：
+>
+> ```bash
+> javac -encoding UTF-8 -d out src/candy/*.java && java -cp out candy.Fractal
+> ```
+>
+> 作者在 JDK 26 上开发，CI 里用 `--release 17` 编译 + JDK 25 跑冒烟测试。
 
 ## 五个小玩意
 
@@ -213,7 +220,8 @@ src/candy/
 no build step: a fractal renderer, a from-scratch ray tracer (reflections, refraction,
 Fresnel, soft shadows), a spinning spiral-galaxy particle simulation that exports looping
 GIFs, a terminal digital-rain effect, and an image-to-ANSI-art viewer. Run any of them with
-a single command, e.g. `java src/candy/RayTracer.java`. Requires JDK 17+.
+a single command, e.g. `java src/candy/RayTracer.java` (needs JDK 22+ for multi-file
+source launching; the sources themselves compile with `--release 17`).
 
 ## License
 
